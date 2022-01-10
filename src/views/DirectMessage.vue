@@ -5,6 +5,7 @@
     <DirectMessageDivider />
     <DirectMessageItem userName="Slackbot" />
     <Editor />
+    <div id="bottom"></div>
   </section>
 </template>
 
@@ -45,6 +46,13 @@ export default {
       const message = this.state.content;
       console.log(message);
     },
+    scrollToElement() {
+      const el = this.$el.querySelector('#bottom');
+      el.scrollIntoView({ behavior: 'smooth' });
+    },
+  },
+  mounted() {
+    this.scrollToElement();
   },
 };
 </script>

@@ -19,6 +19,7 @@
       <ChannelMessage />
       <ChannelMessage />
       <Editor />
+      <div id="bottom"></div>
     </div>
   </section>
 </template>
@@ -34,6 +35,15 @@ export default {
     ChannelHeader,
     ChannelMessage,
     Editor,
+  },
+  methods: {
+    scrollToElement() {
+      const el = this.$el.querySelector('#bottom');
+      el.scrollIntoView({ behavior: 'smooth' });
+    },
+  },
+  mounted() {
+    this.scrollToElement();
   },
 };
 </script>
