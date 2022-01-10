@@ -1,30 +1,47 @@
 <template>
-  <div id="nav">
+  <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+  </div> -->
+  <div class="layout">
+    <Topbar class="topbar" />
+    <Sidebar class="sidebar" />
+    <router-view class="content" />
   </div>
-  <router-view/>
 </template>
 
+<script>
+import Topbar from '@/components/Topbar.vue';
+import Sidebar from '@/components/Sidebar.vue';
+
+export default {
+  name: 'App',
+  components: {
+    Topbar,
+    Sidebar,
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+  'topbar topbar'
+  'sidebar content';
 }
 
-#nav {
-  padding: 30px;
+.topbar {
+  grid-area: topbar;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+.sidebar {
+  grid-area: sidebar;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.content {
+  grid-area: content;
 }
 </style>
