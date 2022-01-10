@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
   .direct-message-wrapper {
     display: flex;
     flex-direction: column;
