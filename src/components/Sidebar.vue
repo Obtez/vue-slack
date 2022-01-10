@@ -65,8 +65,12 @@ button {
 }
 
 .sidebar-fixed {
-  width: 100%;
+  width: calc(260px - 2rem);
   position: fixed;
+  top: 34px;
+  left: 1rem;
+  bottom: 1rem;
+  overflow-y: auto;
 }
 
 .sidebar-container li {
@@ -78,7 +82,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid $purple-border;
+  border-top: 1px solid $purple-border;
+  border-bottom: 1px solid $purple-border;
 }
 
 .sidebar-channel-header h1 {

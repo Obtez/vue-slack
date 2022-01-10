@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <span>{{ pins }}</span>
+    <span v-show="pins">{{ pins }}</span>
     <span v-show="canBookmark">+ Add a bookmark</span>
   </div>
 </template>
@@ -11,9 +11,21 @@ export default {
   props: ['pinData', 'bookmark'],
   data() {
     return {
-      pins: `${this.pinData} pinned` || '',
+      pins: this.validatePins(),
       canBookmark: this.bookmark,
     };
+  },
+  methods: {
+    validatePins() {
+      console.log(this.pinData);
+      if (this.pinData === false) {
+        return false;
+      }
+      if (this.pinData === 1) {
+        return `${this.pinData} pin`;
+      }
+      return `${this.pinData} pins`;
+    },
   },
 };
 </script>
