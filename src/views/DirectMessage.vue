@@ -4,15 +4,7 @@
     <DirectMessageTop userName="Slackbot" />
     <DirectMessageDivider />
     <DirectMessageItem userName="Slackbot" />
-    <div class="editor-container">
-    <quill-editor
-      v-if="state.showEditor"
-      v-model:value="state.content"
-      :options="state.editorOption"
-      :disabled="state.disabled"
-    />
-    <button @click="submitMessage">Send</button>
-    </div>
+    <Editor />
   </section>
 </template>
 
@@ -22,7 +14,8 @@ import DirectMessageTop from '@/components/direct-message/DirectMessageTop.vue';
 import DirectMessageDivider from '@/components/direct-message/DirectMessageDivider.vue';
 import DirectMessageItem from '@/components/direct-message/DirectMessageItem.vue';
 import { reactive } from '@vue/reactivity';
-import { quillEditor } from 'vue3-quill';
+// import { quillEditor } from 'vue3-quill';
+import Editor from '@/components/general/Editor.vue';
 
 export default {
   name: 'DirectMessage',
@@ -31,7 +24,8 @@ export default {
     DirectMessageTop,
     DirectMessageDivider,
     DirectMessageItem,
-    quillEditor,
+    // quillEditor,
+    Editor,
   },
   setup() {
     const state = reactive({
@@ -60,6 +54,7 @@ export default {
   .direct-message-wrapper {
     display: flex;
     flex-direction: column;
+    padding-bottom: 6rem;
   }
 
   .editor-container {
