@@ -18,6 +18,7 @@
       <ChannelMessage />
       <ChannelMessage />
       <ChannelMessage />
+      <Editor />
     </div>
   </section>
 </template>
@@ -25,12 +26,14 @@
 <script>
 import ChannelHeader from '@/components/channel/ChannelHeader.vue';
 import ChannelMessage from '@/components/channel/ChannelMessage.vue';
+import Editor from '@/components/general/Editor.vue';
 
 export default {
   name: 'Channel',
   components: {
     ChannelHeader,
     ChannelMessage,
+    Editor,
   },
 };
 </script>

@@ -56,8 +56,4 @@ export default {
     flex-direction: column;
     padding-bottom: 6rem;
   }
-
-  .editor-container {
-    margin: 0 1rem;
-  }
 </style>

@@ -54,6 +54,13 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/css/variables.scss';
 
+.editor-container {
+  margin: 0 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  height: 100px;
+}
+
 .btn-container {
   border: 1px solid #ccc;
   background-color: $bg-light;
