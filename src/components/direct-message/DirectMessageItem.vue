@@ -61,7 +61,7 @@ export default {
 .message-item-container {
   color: $dark;
   display: flex;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .user-icon-col {
@@ -73,7 +73,7 @@ export default {
   width: 36px;
   height: 36px;
   background-color: #333;
-  border-radius: 8px;
+  border-radius: .5rem;
 }
 
 .message-col {
@@ -81,17 +81,17 @@ export default {
 }
 
 .message-header {
-  margin-bottom: 10px;
+  margin-bottom: .625rem;
 }
 
 span.username {
-  font-size: 15px;
+  font-size: 0.938rem;
   font-weight: 700;
   margin-right: .5rem;
 }
 
 span.timestamp {
-  font-size: 12px;
+  font-size: .75rem;
   color: $gray;
 }
 

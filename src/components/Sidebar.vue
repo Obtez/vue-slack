@@ -1,5 +1,6 @@
 <template>
   <aside class="sidebar-container">
+<div class="sidebar-fixed">
     <div class="sidebar-channel-header">
       <h1>iOS Developers</h1>
       <div class="new-message-icon"></div>
@@ -34,6 +35,7 @@
         </li>
       </ul>
     </div>
+    </div>
   </aside>
 </template>
 
@@ -58,7 +60,13 @@ button {
   height: 100%;
   background-color: $purple;
   padding: 0 1rem;
+  padding-top: 34px;
   color: $white;
+}
+
+.sidebar-fixed {
+  width: 100%;
+  position: fixed;
 }
 
 .sidebar-container li {

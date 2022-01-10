@@ -21,6 +21,11 @@ export default {
 @import '../assets/css/variables.scss';
 
 .top-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
   padding: 4px 0;
   background-color: $topbar;
   display: flex;

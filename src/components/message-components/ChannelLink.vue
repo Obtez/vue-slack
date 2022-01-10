@@ -37,6 +37,7 @@ export default {
   color: $dark;
   background-color: $bg-light;
   margin-bottom: .5rem;
+  border-radius: 8px;
 }
 
 .border-left {
@@ -82,6 +83,7 @@ export default {
   font-weight: 700;
   font-size: 0.875rem;
   background-color: transparent;
+  cursor: pointer;
 }
 
 </style>
