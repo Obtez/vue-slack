@@ -5,16 +5,12 @@
     </div>
     <div class="message-col">
       <div class="message-header">
-        <span class="username">Ashley Porciuncula</span>
-        <span class="timestamp">11:34 AM</span>
+        <span class="username">{{username}}</span>
+        <span class="timestamp">{{ timestamp }}</span>
       </div>
       <p class="message">
-        Hello everyone! I'm Ashley, co-founder of Orbital. Our virtual offices are a whole new take
-        on remote communication. Pop in for meetings, quick chats, open-door office hours, or cowork
-        together through the day - all in the same open 24/7 space.
+        <span v-html="body" />
       </p>
-      <p>I'm also a developer, parent, foodie, and board + video gamer. Looking forward to getting
-      to know the community here!</p>
     </div>
   </section>
 </template>
@@ -22,6 +18,14 @@
 <script>
 export default {
   name: 'ChannelMessage',
+  props: ['postData'],
+  data() {
+    return {
+      username: this.postData.user,
+      timestamp: this.postData.timestamp,
+      body: this.postData.body,
+    };
+  },
 };
 </script>
 

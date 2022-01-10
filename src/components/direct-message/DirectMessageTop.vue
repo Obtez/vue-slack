@@ -7,7 +7,7 @@
       </div>
       <div class="message-col">
         <p v-for="message in topMessage" :key="message">
-          {{message}}
+          <span v-html="message" />
         </p>
       </div>
     </div>

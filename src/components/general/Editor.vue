@@ -15,6 +15,7 @@
 <script>
 import { reactive } from '@vue/reactivity';
 import { quillEditor } from 'vue3-quill';
+import store from '@/store';
 
 export default {
   name: 'Editor',
@@ -45,7 +46,13 @@ export default {
   methods: {
     submitMessage() {
       const message = this.state.content;
-      console.log(message);
+      const postData = {
+        channel: 'intro',
+        post: message,
+        user: 'Da Hedgey',
+        timestamp: '13:55 PM',
+      };
+      store.commit('addChannelPost', postData);
     },
   },
 };
