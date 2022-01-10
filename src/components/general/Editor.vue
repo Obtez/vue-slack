@@ -53,6 +53,7 @@ export default {
         timestamp: '13:55 PM',
       };
       store.commit('addChannelPost', postData);
+      this.state.content = '';
     },
   },
 };

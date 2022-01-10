@@ -22,10 +22,10 @@ export default {
     ChannelMessage,
     Editor,
   },
-  data() {
-    return {
-      posts: this.getPosts('intro'),
-    };
+  computed: {
+    posts() {
+      return this.getPosts('intro');
+    },
   },
   methods: {
     getPosts(title) {

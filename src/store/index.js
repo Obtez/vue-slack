@@ -86,14 +86,16 @@ export default createStore({
 
       const updPost = {
         channel: postData.channel,
-        post: postData.post,
+        body: [postData.post],
         user: postData.user,
         timestamp: postData.timestamp,
         id,
         postNum,
       };
 
-      state.channels[channelIndex].posts = state.channels[channelIndex].posts.concat(updPost);
+      const prevPosts = state.channels[channelIndex].posts;
+
+      state.channels[channelIndex].posts = [...prevPosts, updPost];
     },
   },
   actions: {
